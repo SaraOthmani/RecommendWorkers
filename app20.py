@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import openpyxl
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
@@ -126,6 +127,8 @@ if not recommended_workers_df.empty:
     score_bins = [0, 2.99, 3.99, 5]
     score_labels = ['à reconsidérer', 'recommandé', 'Fortement recommandé']
     recommended_workers_df['classification'] = pd.cut(recommended_workers_df['evaluation_score'], bins=score_bins, labels=score_labels)
+
+
 
     # Apply filters
     filtered_workers_df = recommended_workers_df[
