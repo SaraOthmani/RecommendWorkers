@@ -4,4 +4,4 @@ pandas==1.5.3
 Pillow==9.4.0
 scikit_learn==1.2.1
 streamlit==1.19.0
-openpyxl==3.0.9
+openpyxl==3.0.10
